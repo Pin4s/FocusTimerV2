@@ -4,5 +4,5 @@ import * as state from './FocusTimer/state.js'
 import { currentSound } from './FocusTimer/events.js'
 
 
-FocusTimer.start(25,0)
+FocusTimer.start(0,10)
 
