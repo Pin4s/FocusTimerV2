@@ -2,6 +2,7 @@ import state from './state.js'
 import * as el from './elements.js'
 import { reset } from './actions.js'
 import { currentSound } from './events.js'
+import { endTimerSound } from './sounds.js'
 
 
 export function countdown(){
@@ -23,10 +24,10 @@ export function countdown(){
         minutes--
     }
     if(minutes < 0){
+        endTimerSound.play()
         reset()
         return
     }
-
 
 
     updateDisplay(minutes, seconds)

@@ -11,6 +11,8 @@ rainSound.loop = true
 export const coffeShopSound = new Audio('./assets/sounds/coffecanva.mp3')
 coffeShopSound.loop = true
 
+export const endTimerSound = new Audio('./assets/sounds/acabou.mp3')
+
 /*export let soundState = true
 
 const buttonToggleSound = document.getElementById('toggle-sound')
