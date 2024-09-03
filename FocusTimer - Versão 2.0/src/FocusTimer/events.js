@@ -22,12 +22,15 @@ export function registerControls(){
         if(currentSound && currentSound !== sounds[sound]){
             currentSound.pause()
         }
+
+        currentSound = sounds[sound]
+        
         if(actions.isMute == false){
-            return
-        }else{
-            currentSound = sounds[sound]
-            sounds[sound].play()
-        }
+            currentSound.volume = 0
+        }//else{
+        
+        sounds[sound].play()
+        //}
     }))
 
    

@@ -1,6 +1,7 @@
 import state from './state.js'
 import * as el from './elements.js'
 import { reset } from './actions.js'
+import { currentSound } from './events.js'
 
 
 export function countdown(){
@@ -29,7 +30,6 @@ export function countdown(){
 
 
     updateDisplay(minutes, seconds)
-
     state.countdownId = setTimeout(() => countdown(), 1000)
 }
 

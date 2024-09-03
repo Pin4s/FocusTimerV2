@@ -36,15 +36,24 @@ export function decrease(){
 }
 
 
+//essa porra dessa parte do caralho aqui é pra mutar a porra da musica (deu um trabalho desgraçado até eu descobrir oq fazer)
+//
+
 export let isMute = document.documentElement.classList.contains('soundOn')
-
-
 export const buttonPauseSound = document.getElementById('pause-sound');
 buttonPauseSound.addEventListener('click', () => {
     document.documentElement.classList.toggle('soundOn')
-    alert(isMute)
     isMute =! isMute
     
-    events.currentSound.pause()
+    //events.currentSound.pause()
+    if(events.currentSound == undefined){
+        return
+    }
+    if(isMute == false){
+        events.currentSound.volume = 0;
+    }else{
+        events.currentSound.volume = 1;
+    }
+    
 })
 
